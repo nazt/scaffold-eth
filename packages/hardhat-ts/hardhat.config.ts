@@ -24,6 +24,8 @@ import { HttpNetworkUserConfig } from 'hardhat/types';
 import { HardhatRuntimeEnvironmentExtended, TEthers } from 'helpers/types/hardhat-type-extensions';
 import { create } from 'ipfs-http-client';
 
+require("./hardhat")
+
 /**
  * Set your target network!!!
  */
@@ -152,12 +154,12 @@ const config: HardhatUserConfig = {
     deployments: './generated/deployments',
   },
   typechain: {
-    outDir: '../vite-app-ts/src/generated/contract-types',
+    outDir: './typechain',
   },
 };
 export default config;
 
-const DEBUG = false;
+const DEBUG = true;
 
 function debug(text: string) {
   if (DEBUG) {

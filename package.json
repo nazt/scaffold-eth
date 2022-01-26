@@ -17,8 +17,10 @@
       "node": "yarn workspace @scaffold-eth/hardhat chain",
       "test": "yarn workspace @scaffold-eth/hardhat test",
       "start": "yarn workspace @scaffold-eth/vite-app start",
+      "dev": "yarn workspace @nzt/web dev",
       "compile": "yarn workspace @scaffold-eth/hardhat compile",
       "contracts:build": "yarn workspace @scaffold-eth/hardhat hardhat compile && yarn workspace @scaffold-eth/vite-app contracts:external",
+      "contracts:build0": "yarn workspace @scaffold-eth/hardhat hardhat compile",
       "contracts:rebuild": "yarn workspace @scaffold-eth/hardhat hardhat clean && yarn contracts:build",
       "export": "yarn workspace @scaffold-eth/hardhat export",
       "deploy": "yarn workspace @scaffold-eth/hardhat deploy",
@@ -56,7 +58,8 @@
          "packages/hardhat-ts",
          "packages/vite-app-ts",
          "packages/services/*",
-         "packages/subgraph"
+         "packages/subgraph",
+         "packages/nzt-web"
       ]
    },
    "packageManager": "yarn@3.1.0",
